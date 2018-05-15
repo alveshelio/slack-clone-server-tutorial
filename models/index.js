@@ -5,9 +5,12 @@ const operatorsAliases = {
   $gt: Op.gt,
 };
 
-const sequelize = new Sequelize('slack', 'slack', 'slack', {
+const sequelize = new Sequelize('slack', 'postgres', 'druide', {
   dialect: 'postgres',
   operatorsAliases,
+  define: {
+    underscored: true,
+  },
 });
 const models = {
   User: sequelize.import('./user'),
