@@ -13,6 +13,6 @@ export default `
   }
   
   type Mutation {
-    registerUser(username: String!, email: String!, password: String!): User!
+    register(username: String!, email: String!, password: String!): User!
   }
 `;
